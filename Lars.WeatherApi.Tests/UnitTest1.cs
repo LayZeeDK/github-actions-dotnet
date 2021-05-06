@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Lars.WeatherApi.Test
+namespace Lars.WeatherApi.Tests
 {
     public class UnitTest1
     {

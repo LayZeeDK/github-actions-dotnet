@@ -64,7 +64,7 @@ jobs:
     defaults:
       run:
         shell: pwsh
-        working-directory: ./Lars.WeatherApi.Test
+        working-directory: ./Lars.WeatherApi.Tests
 
     steps:
       - uses: actions/checkout@v2
@@ -74,8 +74,5 @@ jobs:
         with:
           dotnet-version: ${{ env.dotnet-sdk-version }}
 
-      - name: Restore
-        run: dotnet restore
-
       - name: Test
-        run: dotnet test
+        run: dotnet test **/*Tests/*.csproj
