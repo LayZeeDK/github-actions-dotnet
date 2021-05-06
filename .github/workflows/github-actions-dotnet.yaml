@@ -109,6 +109,7 @@ jobs:
           New-Item -Path ./.sonar/scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
 
+      # Credits: https://medium.com/tribalscale/net-core-code-quality-with-coverlet-and-sonarqube-part-2-141617f83d6f
       - run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
       - run: dotnet build-server shutdown
 
