@@ -31,3 +31,12 @@ dotnet new xunit --output Lars.WeatherApi.Test
 # Add reference from testing project to web API project
 dotnet add Lars.WeatherApi.Test/Lars.WeatherApi.Test.csproj reference Lars.WeatherApi/Lars.WeatherApi.csproj
 ```
+
+# Generate GitHub Actions CI workflow
+
+```powershell
+# Install GitHub Actions .NET template
+dotnet new -i TimHeuer.GitHubActions.Templates
+# Generate GitHub Actions CI workflow
+dotnet new workflow
+```
