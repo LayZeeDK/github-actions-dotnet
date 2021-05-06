@@ -5,6 +5,8 @@
 dotnet new gitignore
 # Generate Visual Studio solution configuration
 dotnet new sln
+# Rename solution configuration
+mv github-actions-dotnet.sln Lars.sln
 ```
 
 # Generate web API project
@@ -14,6 +16,8 @@ dotnet new sln
 mkdir Lars.WeatherApi
 # Generate ASP.NET Core Web API project
 dotnet new webapi --output Lars.WeatherApi
+# Add project to solution
+dotnet sln github-actions-dotnet.sln add .\Lars.WeatherApi\Lars.WeatherApi.csproj
 ```
 
 # Generate testing project
@@ -23,6 +27,8 @@ dotnet new webapi --output Lars.WeatherApi
 mkdir Lars.WeatherApi.Tests
 # Generate ASP.NET Core Web API project
 dotnet new xunit --output Lars.WeatherApi.Tests
+# Add project to solution
+dotnet sln github-actions-dotnet.sln add .\Lars.WeatherApi.Tests\Lars.WeatherApi.Tests.csproj
 ```
 
 # Add project reference
