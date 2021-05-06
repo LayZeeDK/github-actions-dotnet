@@ -49,14 +49,8 @@ jobs:
         with:
           dotnet-version: ${{ env.dotnet-sdk-version }}
 
-      - name: Restore
-        run: dotnet restore
-
       - name: Build
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Test
-        run: dotnet test
+        run: dotnet build --configuration "Release"
 
   test:
     name: Test
@@ -64,7 +58,6 @@ jobs:
     defaults:
       run:
         shell: pwsh
-        working-directory: ./Lars.WeatherApi.Tests
 
     steps:
       - uses: actions/checkout@v2
@@ -75,4 +68,4 @@ jobs:
           dotnet-version: ${{ env.dotnet-sdk-version }}
 
       - name: Test
-        run: dotnet test **/*Tests/*.csproj
+        run: dotnet test --configuration "Release" --collect "Code coverage"
