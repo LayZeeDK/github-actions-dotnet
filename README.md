@@ -46,3 +46,10 @@ dotnet new -i TimHeuer.GitHubActions.Templates
 # Generate GitHub Actions CI workflow
 dotnet new workflow
 ```
+
+## SonarCloud
+
+```powershell
+# Add Coverlet builder
+dotnet add .\Lars.WeatherApi.Tests\Lars.WeatherApi.Tests.csproj package coverlet.msbuild
+```
