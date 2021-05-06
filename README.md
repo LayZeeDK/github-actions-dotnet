@@ -9,7 +9,7 @@ dotnet new sln
 mv github-actions-dotnet.sln Lars.sln
 ```
 
-# Generate web API project
+## Generate web API project
 
 ```powershell
 # Create project folder
@@ -20,7 +20,7 @@ dotnet new webapi --output Lars.WeatherApi
 dotnet sln github-actions-dotnet.sln add .\Lars.WeatherApi\Lars.WeatherApi.csproj
 ```
 
-# Generate testing project
+## Generate testing project
 
 ```powershell
 # Create project folder
@@ -31,14 +31,14 @@ dotnet new xunit --output Lars.WeatherApi.Tests
 dotnet sln github-actions-dotnet.sln add .\Lars.WeatherApi.Tests\Lars.WeatherApi.Tests.csproj
 ```
 
-# Add project reference
+## Add project reference
 
 ```powershell
 # Add reference from testing project to web API project
 dotnet add Lars.WeatherApi.Test/Lars.WeatherApi.Tests.csproj reference Lars.WeatherApi/Lars.WeatherApi.csproj
 ```
 
-# Generate GitHub Actions CI workflow
+## Generate GitHub Actions CI workflow
 
 ```powershell
 # Install GitHub Actions .NET template
