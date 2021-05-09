@@ -1,3 +1,9 @@
+# .NET workspace using GitHub Actions
+
+ASP.NET Core MVC workspace generated using the `dotnet` CLI.
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=LayZeeDK_github-actions-dotnet&metric=coverage)](https://sonarcloud.io/dashboard?id=LayZeeDK_github-actions-dotnet)
+
 # Generate workspace
 
 ```powershell
