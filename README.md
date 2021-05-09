@@ -23,7 +23,7 @@ mkdir Lars.WeatherApi
 # Generate ASP.NET Core Web API project
 dotnet new webapi --output Lars.WeatherApi
 # Add project to solution
-dotnet sln github-actions-dotnet.sln add .\Lars.WeatherApi\Lars.WeatherApi.csproj
+dotnet sln github-actions-dotnet.sln add ./Lars.WeatherApi/Lars.WeatherApi.csproj
 ```
 
 ## Generate testing project
@@ -34,7 +34,7 @@ mkdir Lars.WeatherApi.Tests
 # Generate ASP.NET Core Web API project
 dotnet new xunit --output Lars.WeatherApi.Tests
 # Add project to solution
-dotnet sln github-actions-dotnet.sln add .\Lars.WeatherApi.Tests\Lars.WeatherApi.Tests.csproj
+dotnet sln github-actions-dotnet.sln add ./Lars.WeatherApi.Tests/Lars.WeatherApi.Tests.csproj
 ```
 
 ## Add project reference
