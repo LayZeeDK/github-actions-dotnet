@@ -13,6 +13,7 @@ namespace Lars.WeatherApi.Tests.Controllers
         : IClassFixture<WebApplicationFactory<Lars.WeatherApi.Startup>>, IDisposable
     {
         private bool disposedValue;
+        
         protected HttpClient Http { get; }
 
         public WeatherForecastControllerTests(WebApplicationFactory<Lars.WeatherApi.Startup> webApplicationFactory)
