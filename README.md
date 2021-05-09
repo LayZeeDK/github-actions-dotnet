@@ -35,6 +35,8 @@ mkdir Lars.WeatherApi.Tests
 dotnet new xunit --output Lars.WeatherApi.Tests
 # Add project to solution
 dotnet sln github-actions-dotnet.sln add ./Lars.WeatherApi.Tests/Lars.WeatherApi.Tests.csproj
+# Add ASP.NET Core MVC testing package
+dotnet add ./Lars.WeatherApi.Tests/Lars.WeatherApi.Tests.csproj package Microsoft.AspNetCore.Mvc.Testing
 ```
 
 ## Add project reference
