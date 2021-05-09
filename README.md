@@ -51,5 +51,5 @@ dotnet new workflow
 
 ```powershell
 # Add Coverlet builder
-dotnet add .\Lars.WeatherApi.Tests\Lars.WeatherApi.Tests.csproj package coverlet.msbuild
+dotnet add ./Lars.WeatherApi.Tests/Lars.WeatherApi.Tests.csproj package coverlet.msbuild
 ```
