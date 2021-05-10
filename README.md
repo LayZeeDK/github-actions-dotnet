@@ -61,3 +61,11 @@ dotnet new workflow
 # Add Coverlet builder
 dotnet add ./Lars.WeatherApi.Tests/Lars.WeatherApi.Tests.csproj package coverlet.msbuild
 ```
+
+## Formatting
+
+```powershell
+# Install .NET template
+dotnet new -i ForEvolve.Conventions.Templates
+dotnet new editorconfig
+```

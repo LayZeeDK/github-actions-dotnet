@@ -33,6 +33,27 @@ on:
       - "**/*.gitattributes"
 
 jobs:
+  lint:
+    name: Lint
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.dotnet-sdk-version }}
+      - name: Install dotnet format
+        run: dotnet tool update -g dotnet-format
+
+      - name: Lint .NET code
+        run: dotnet format --check --verbosity diagnostic
+
   build:
     name: Build
     runs-on: windows-latest
