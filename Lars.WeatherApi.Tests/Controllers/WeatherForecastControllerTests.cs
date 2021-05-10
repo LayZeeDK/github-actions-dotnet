@@ -13,7 +13,7 @@ namespace Lars.WeatherApi.Tests.Controllers
         : IClassFixture<WebApplicationFactory<Lars.WeatherApi.Startup>>, IDisposable
     {
         private bool disposedValue;
-        
+
         protected HttpClient Http { get; }
 
         public WeatherForecastControllerTests(WebApplicationFactory<Lars.WeatherApi.Startup> webApplicationFactory)
@@ -50,10 +50,12 @@ namespace Lars.WeatherApi.Tests.Controllers
             {
             }
 
+            protected string Endpoint { get; } = "/weatherforecast";
+
             [Fact]
             public async Task RespondsWithSuccess()
             {
-                var response = await this.Http.GetAsync("/weatherforecast");
+                var response = await this.Http.GetAsync(this.Endpoint);
 
                 response.EnsureSuccessStatusCode();
             }
@@ -61,7 +63,7 @@ namespace Lars.WeatherApi.Tests.Controllers
             [Fact]
             public async Task RespondsWithA5DayWeatherForecast()
             {
-                var response = await this.Http.GetAsync("/weatherforecast");
+                var response = await this.Http.GetAsync(this.Endpoint);
 
                 var forecast = await this.ToJsonAsync<IEnumerable<WeatherForecast>>(response);
                 Assert.Equal(5, forecast.Count());
